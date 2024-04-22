@@ -9,13 +9,35 @@ body {
   flex-direction: column;
 }
 
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
 header{
   background-color: #373b69;
+  display: flex;
   padding: 1rem;
+  justify-content: flex-end;
+}
+
+.search{
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: white;
+  border: #22254b 2px solid;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;  
+}
+
+.search:focus{
+  outline: none;
 }
 
 .movie-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -34,6 +56,8 @@ header{
 }
 
 .movie img {
+  object-fit: cover;
+  height: 450px;
   width: 100%;
 }
 
@@ -68,3 +92,22 @@ header{
 .movie:hover .movie-overview {
   transform: translate(0);
 } 
+
+.tag{
+  background-color: #22254b;
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.tag.green{
+  color: (rgb(59, 239, 59));
+}
+
+.tag.orange{
+  color: orange;
+}
+
+.tag.red{
+  color: red;
+}
